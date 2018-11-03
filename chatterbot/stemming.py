@@ -16,6 +16,15 @@ class SimpleStemmer(object):
         self.stopwords = nltk.corpus.stopwords.words(language)
         self.stopwords.append('')
 
+    def initialize(self):
+        """
+        Initialize the stemmer.
+        """
+        from chatterbot.utils import nltk_download_corpus
+
+        nltk.download('stopwords')
+        # nltk_download_corpus('stopwords')
+
     def stem(self, text):
 
         if not text:

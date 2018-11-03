@@ -21,6 +21,8 @@ class StorageAdapter(object):
             'stemmer_language', 'english'
         ))
 
+        self.stemmer.initialize()
+
     def get_model(self, model_name):
         """
         Return the model class for a given model name.
